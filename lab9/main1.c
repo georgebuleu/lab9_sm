@@ -136,7 +136,7 @@ int main() {
 
 
     // YOUR SORTING ALGORITHM SHOUL BE HERE!
-    sort((int *)(DDR2_BASE_ADDRESS + DDR2_10_MB_SIZE / 2), DDR2_10_MB_SIZE / (2 * sizeof(int)), DDR2_10_MB_SIZE / sizeof(int) - 1);
+    sort((int *)(DDR2_BASE_ADDRESS + DDR2_10_MB_SIZE / 4), 0, DDR2_10_MB_SIZE / 4 / sizeof(int) - 1);
 
 
 
