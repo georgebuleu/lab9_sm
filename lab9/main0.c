@@ -154,7 +154,10 @@ int main() {
     XMutex_Unlock(&mutex_0, UART_MUTEX);
 
     // YOUR SORTING ALGORITHM SHOUL BE HERE!
-    sort((int *)DDR2_BASE_ADDRESS, 0, DDR2_10_MB_SIZE / 4 / sizeof(int) - 1);
+    //non-distributed index
+    //sort((int *)DDR2_BASE_ADDRESS, 0, DDR2_10_MB_SIZE / sizeof(int) - 1);
+    int segment_size = DDR2_10_MB_SIZE/ sizeof(int)/ 4;
+    sort((int *)DDR2_BASE_ADDRESS, 0, segment_size - 1);
 
 
 

@@ -136,8 +136,8 @@ int main() {
 
 
     // YOUR SORTING ALGORITHM SHOUL BE HERE!
-    sort((int *)(DDR2_BASE_ADDRESS + 2 * DDR2_10_MB_SIZE / 4), 0, DDR2_10_MB_SIZE / 4 / sizeof(int) - 1);
-
+    int segment_size = DDR2_10_MB_SIZE/ sizeof(int)/ 4;
+    sort((int *)(DDR2_BASE_ADDRESS + 2 * segment_size), 2 * segment_size, 3 * segment_size - 1);
 
 
     XMutex_Lock(&mutex_0, UART_MUTEX);
